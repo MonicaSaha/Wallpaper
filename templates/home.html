@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home Page</title>
+</head>
+<body>
+<h1>Welcome to the image Dashboard</h1>
+ {% if messages != None %}
+            <h2> Image Category </h2>
+           {% for message in messages %}
+
+       <h3><b>{{message.Category_Id}}</b><a href=" {% url 'Item' category=message.Category_Id %}"> {{message.Title}} </a></h3>
+               <br>
+           {% endfor %}
+       {% else %}
+
+                <h1> No product Exist in the database plz insert data into database </h1>
+
+       {% endif %}
+
+</body>
+</html>

@@ -21,7 +21,7 @@ def item(request, category):
 
 def watch(request, cat):
     try:
-        var = Image.objects.all()
+        var = Image.objects.filter(categories=cat)
     except Image.DoesNotExist:
         var = None
     context = {'variables': var,

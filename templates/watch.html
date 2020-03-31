@@ -6,11 +6,10 @@
 </head>
 <body>
                  {% for variable in variables %}
-
-                    <h1>wow we fetch</h1>
                     {{variable.Name}}
                     {{variable.categories}}
                     {{variable.Image_Id}}
+                    <img src="{{variable.url}}" alt ="Sorry image not found">
 
          {% endfor %}
 

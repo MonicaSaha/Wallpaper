@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Image </title>
+</head>
+<body>
+      {% if print != None %}
+            <h2> Image Category </h2>
+           {% for message in print %}
+
+             <img src="{{message.url}}" alt = "no image">
+               <br>
+           {% endfor %}
+       {% else %}
+
+                <h1> No product Exist in the database plz insert data into database </h1>
+
+       {% endif %}
+</body>
+</html>
